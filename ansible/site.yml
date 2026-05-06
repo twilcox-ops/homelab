@@ -1,0 +1,29 @@
+---
+- name: Homelab System Maintenance
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Ensure Fail2ban is running
+      service:
+        name: fail2ban
+        state: started
+        enabled: yes
+
+    - name: Ensure OpenSearch is running
+      service:
+        name: opensearch
+        state: started
+        enabled: yes
+
+    - name: Ensure OpenSearch Dashboards is running
+      service:
+        name: opensearch-dashboards
+        state: started
+        enabled: yes
