@@ -9,3 +9,6 @@ automation, and DevOps tooling.
 - Security monitoring with Fail2ban and OpenSearch
 - Ansible automation playbooks
 - Bash and Python scripts
+
+## Status
+Ongoing — adding to this as I learn new tools and break things along the way.
